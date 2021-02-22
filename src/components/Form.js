@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import * as yup from 'yup';
 import schema from '../validation/Schema';
+import Styling from '../styling/form.css';
 
 //Reference forms guided project --
 const initialValues = {
@@ -96,11 +97,11 @@ const inputChange = (name, value) => {
     //Styling located in seperate folder
     //The HTML that shows up
     return (
-        <div>
+        <div className='textBody'>
             <form onSubmit={onSubmit}>
 
             <div>
-                <label>
+                <label className='name'>
                     Your Name: <input value={form.name} onChange={onChange} name='name' type='text' />
                     <span>{formErrors.name}</span>
                 </label>          
@@ -122,8 +123,8 @@ const inputChange = (name, value) => {
                 <span>{formErrors.pizzaSize}</span>
             </div>
 
-            <div className='ingredients' >
-            <div>
+        <div className='options' >
+            <div className='toppings'>
                 <label> Sauce
                     <input  type='checkbox' name='sauce'    checked={form.sauce}    onChange={onChange} />
                 </label>
@@ -133,8 +134,6 @@ const inputChange = (name, value) => {
                 <label> 9MM Bullets
                     <input  type='checkbox' name='nineBullets'    checked={form.nineBullets}    onChange={onChange} />
                 </label>
-            </div>
-            <div>
                 <label> EXTRA Cheese... really?
                     <input  type='checkbox' name='xtraCheese'    checked={form.xtraCheese}    onChange={onChange} />
                 </label>
@@ -144,8 +143,6 @@ const inputChange = (name, value) => {
                 <label> Broken Glass
                     <input  type='checkbox' name='brokenGlass'    checked={form.brokenGlass}    onChange={onChange} />
                 </label>
-            </div>
-            <div>
                 <label> Pepperoni
                     <input  type='checkbox' name='pepperoni'    checked={form.pepperoni}    onChange={onChange} />
                 </label>
@@ -155,8 +152,6 @@ const inputChange = (name, value) => {
                 <label> CAT!
                     <input  type='checkbox' name='cat'  checked={form.cat}  onChange={onChange} />
                 </label>
-            </div>
-            <div>
                 <label> Feta
                     <input  type='checkbox' name='feta'  checked={form.feta}  onChange={onChange} />
                 </label>
@@ -167,18 +162,18 @@ const inputChange = (name, value) => {
                     <input  type='checkbox' name='handOfGod'  checked={form.handOfGod}  onChange={onChange} />
                 </label>
             </div>
-        <div>
-            <label>
-                Additional Care:
-                <input 
-                value={form.text}
-                onChange={onChange}
-                name='text'
-                type='text'
-                />
-            </label>
-        </div>
+            <div className='instruction'>
+                <label>
+                    Additional Care:
+                    <input 
+                    value={form.text}
+                    onChange={onChange}
+                    name='text'
+                    type='text'
+                    />
+                </label>
             </div>
+        </div>
 
             <button id='submit-btn' disabled={disabled}>Order NOW! Id-iot</button>
             </form>
