@@ -54,8 +54,15 @@ table {
 .navBar {
     display: flex;
     justify-content: space-between;
-    margin: 4%;
+    padding: 4%;
+    background-color: black;
+}
+
+.linkBtn {
     text-transform: uppercase;
+    border: 1px, black;
+    font-size: 40px;
+    color: red;
 }
 
 a:link {

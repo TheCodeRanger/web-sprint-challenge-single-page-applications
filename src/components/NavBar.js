@@ -5,8 +5,8 @@ import Styling from '../styling/navBar.css';
 const NavBar = () => {
     return (
         <div className='navBar link'>
-            <Link to='/'>Home </Link>
-            <Link to='/pizza'>Pizza </Link>
+            <Link className='linkBtn' to='/'>Home </Link>
+            <Link className='linkBtn' to='/pizza'>Pizza </Link>
         </div>
     )
 }
