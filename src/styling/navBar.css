@@ -16,11 +16,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
+	/* margin: 0;
+	padding: 0; */
 	/* border: 0; */
 	font-size: 100%;
-	font: inherit;
+	/* font: inherit; */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -51,6 +51,11 @@ table {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: terminator;
+    src: url(./fonts/TerminatorGenisys-Vodx.ttf);
+}
+
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -59,8 +64,8 @@ table {
 }
 
 .linkBtn {
+    font-family: terminator;
     text-transform: uppercase;
-    border: 1px, black;
     font-size: 40px;
     color: red;
 }
