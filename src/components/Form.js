@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import axios from "axios";
-import * as yup from "yup";
+import axios from 'axios';
+import * as yup from 'yup';
 import schema from '../validation/Schema';
 
+//Reference forms guided project --
 const initialValues = {
     name: '',
     text: '',
@@ -28,6 +29,7 @@ const initialErrors = {
     pizzaSize: ''
 }
 
+//Reference advanced forms guided project --DOUBLE CHECK SYNTAX--
 export  const Form = () => {
     const [orders, setOrders] = useState([])
     const [form, setForm] = useState(initialValues)
@@ -88,6 +90,7 @@ const inputChange = (name, value) => {
         inputChange(name, valueToUse)
     }
     
+    //The HTML that shows up
     return (
         <div>
             <form onSubmit={onSubmit}>

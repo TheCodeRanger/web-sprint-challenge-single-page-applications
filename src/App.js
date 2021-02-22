@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import Form from './components/Form';
 import Home from './components/Home';
 
+//Rendered from components
 const App = () => {
   return (
     <div>
