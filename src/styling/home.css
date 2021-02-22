@@ -16,11 +16,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
+	/* margin: 0;
+	padding: 0; */
 	/* border: 0; */
 	font-size: 100%;
-	font: inherit;
+	/* font: inherit; */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -51,3 +51,42 @@ table {
 	box-sizing: border-box;
 }
 
+@font-face {
+    font-family: terminator;
+    src: url(./fonts/TerminatorGenisys-Vodx.ttf);
+}
+
+@-webkit-keyframes glow {
+	from {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+	}
+	to {
+	  text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+	}
+  }
+
+.welcome {
+	padding: 4%;
+	color: white;
+	background-image: url(https://i.insider.com/59ee3686ddd0631c1e8b656f);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.title {
+	text-align: center;
+	font-family: terminator;
+	color: rgb(158, 154, 154);	
+	font-size: 100px;
+	padding: 10%;
+	margin-bottom: 10%;
+}
+
+.glow {
+	font-size: 80px;
+	color: #fff;
+	text-align: center;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+  }
