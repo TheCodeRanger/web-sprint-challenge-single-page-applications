@@ -1,5 +1,7 @@
 import React from 'react';
+import Styling from '../styling/home.css';
 
+//ALL home page content here. Reference forms guided project.
 export const Home = () => {
     return (
         <div>

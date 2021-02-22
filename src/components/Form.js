@@ -29,7 +29,7 @@ const initialErrors = {
     pizzaSize: ''
 }
 
-//Reference advanced forms guided project --DOUBLE CHECK SYNTAX--
+//Reference advanced forms guided project
 export  const Form = () => {
     const [orders, setOrders] = useState([])
     const [form, setForm] = useState(initialValues)
@@ -89,7 +89,11 @@ const inputChange = (name, value) => {
         const valueToUse = type === 'checkbox' ? checked : value
         inputChange(name, valueToUse)
     }
-    
+    //Arnold audio file upon submit form - not working yet
+
+    // const snd = new Audio()
+
+    //Styling located in seperate folder
     //The HTML that shows up
     return (
         <div>
@@ -176,7 +180,7 @@ const inputChange = (name, value) => {
         </div>
             </div>
 
-            <button id='submit-btn' disabled={disabled}>Order</button>
+            <button id='submit-btn' disabled={disabled}>Order NOW! Id-iot</button>
             </form>
 
             <div>
