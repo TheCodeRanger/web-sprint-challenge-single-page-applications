@@ -125,40 +125,40 @@ const inputChange = (name, value) => {
 
         <div className='options' >
             <div className='toppings'>
-                <label> Sauce
+                <label className='pizzaItem'> Sauce
                     <input  type='checkbox' name='sauce'    checked={form.sauce}    onChange={onChange} />
                 </label>
-                <label> Cheese
+                <label className='pizzaItem'> Cheese
                     <input  type='checkbox' name='cheese'    checked={form.cheese}    onChange={onChange} />
                 </label>
-                <label> 9MM Bullets
+                <label className='pizzaItem'> 9MM Bullets
                     <input  type='checkbox' name='nineBullets'    checked={form.nineBullets}    onChange={onChange} />
                 </label>
-                <label> EXTRA Cheese... really?
+                <label className='pizzaItem'> EXTRA Cheese... really?
                     <input  type='checkbox' name='xtraCheese'    checked={form.xtraCheese}    onChange={onChange} />
                 </label>
-                <label> Gravel
+                <label className='pizzaItem'> Gravel
                     <input  type='checkbox' name='gravel'    checked={form.gravel}    onChange={onChange} />
                 </label>
-                <label> Broken Glass
+                <label className='pizzaItem'> Broken Glass
                     <input  type='checkbox' name='brokenGlass'    checked={form.brokenGlass}    onChange={onChange} />
                 </label>
-                <label> Pepperoni
+                <label className='pizzaItem'> Pepperoni
                     <input  type='checkbox' name='pepperoni'    checked={form.pepperoni}    onChange={onChange} />
                 </label>
-                <label> Garlic
+                <label className='pizzaItem'> Garlic
                     <input  type='checkbox' name='garlic'    checked={form.garlic}    onChange={onChange} />
                 </label>  
-                <label> CAT!
+                <label className='pizzaItem'> CAT!
                     <input  type='checkbox' name='cat'  checked={form.cat}  onChange={onChange} />
                 </label>
-                <label> Feta
+                <label className='pizzaItem'> Feta
                     <input  type='checkbox' name='feta'  checked={form.feta}  onChange={onChange} />
                 </label>
-                <label> Olives
+                <label className='pizzaItem'> Olives
                     <input  type='checkbox' name='olives'  checked={form.olives}  onChange={onChange} />
                 </label>
-                <label> HAND OF GOD
+                <label className='pizzaItem'> HAND OF GOD
                     <input  type='checkbox' name='handOfGod'  checked={form.handOfGod}  onChange={onChange} />
                 </label>
             </div>
@@ -175,18 +175,19 @@ const inputChange = (name, value) => {
             </div>
         </div>
 
-            <button id='submit-btn' disabled={disabled}>Order NOW! Id-iot</button>
+            <button id='submitBtn' disabled={disabled}>Order NOW! Id-iot</button>
             </form>
 
             <div>
                 {orders.map(item => 
-                 <div key={item.id}>
-                    <h1>Name: {item.name}</h1>
-                    <p>Special Instructions: {item.text}</p>
+                <div key={item.id}>
+                    <h1>Thank you for your order! Your order will be delivered by a T1000.</h1>
+                    <h2>Name: {item.name}</h2>
+                    <p>Additional Care: {item.text}</p>
                     <p>Size: {item.pizzaSize}</p>
                     <p>Toppings: {item.toppings}</p>
-                    <p>Order Date: {item.createdAt}</p>
-                 </div>)}
+                    <p>You order was placed on: {item.createdAt}</p>
+                </div>)}
             </div>
         </div>
     )

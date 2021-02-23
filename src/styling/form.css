@@ -1,9 +1,28 @@
-* {
-	box-sizing: border-box;
-}
 
 .textBody {
+	background-image: url(https://gamespot1.cbsistatic.com/uploads/screen_kubrick/1557/15576725/3292668-arnold-schwarzenegger-in-terminator-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
 	text-align: center;
-	padding: 30vh;
+	line-height: 3;
 }
 
+.name {
+	padding-top: 50%;
+	font-size: 30px;
+}
+
+.toppings {
+	display: flex;
+	flex-direction: column;
+}
+
+.pizzaItem {
+	text-transform: uppercase;
+	font-size: 22px;
+}
+
+.instruction {
+	text-transform: uppercase;
+}
