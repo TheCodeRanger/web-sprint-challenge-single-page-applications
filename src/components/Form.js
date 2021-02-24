@@ -102,7 +102,7 @@ const inputChange = (name, value) => {
 
             <div>
                 <label className='name'>
-                    Your Name: <input value={form.name} onChange={onChange} name='name' type='text' />
+                    Your Name: <input type='text' name='name' placeholder='Enter your name' value={form.name} onChange={onChange} />
                     <span>{formErrors.name}</span>
                 </label>          
             </div>
@@ -165,11 +165,12 @@ const inputChange = (name, value) => {
             <div className='instruction'>
                 <label>
                     Additional Care:
-                    <input 
-                    value={form.text}
-                    onChange={onChange}
+                    <input
                     name='text'
                     type='text'
+                    placeholder = 'Comments for your order' 
+                    value={form.text}
+                    onChange={onChange}  
                     />
                 </label>
             </div>
@@ -185,7 +186,7 @@ const inputChange = (name, value) => {
                     <h2>Name: {item.name}</h2>
                     <p>Additional Care: {item.text}</p>
                     <p>Size: {item.pizzaSize}</p>
-                    <p>Toppings: {item.toppings}</p>
+                    <p>Tasties: {item.toppings}</p>
                     <p>You order was placed on: {item.createdAt}</p>
                 </div>)}
             </div>
